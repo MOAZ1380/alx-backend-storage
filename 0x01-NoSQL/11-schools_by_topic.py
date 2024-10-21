@@ -4,4 +4,5 @@
 
 def schools_by_topic(mongo_collection, topic):
     """ Inserts new document in collection based on kwargs """
-    return list(mongo_collection.find({"topic": topic}))
+    schools = mongo_collection.find({"topics": topic})
+    return list(schools)
